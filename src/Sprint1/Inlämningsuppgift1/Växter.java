@@ -1,12 +1,16 @@
 package Sprint1.Inlämningsuppgift1;
 
-public abstract class Växter{
+public class Växter {
     private String name;
     private double heightInMeters;
 
     public Växter(String name, double heightInMeters) {
-        this.name = name;
-        this.heightInMeters = heightInMeters;
+        if(!name.isEmpty() && heightInMeters > 0){
+            this.name = name;  // inkapsulation kontrollerar så ingen ogiltiga värden kan passera.
+            this.heightInMeters = heightInMeters;
+        } else {
+            System.out.println("Invalid values");
+        }
     }
 
     public String getName() {
@@ -16,8 +20,4 @@ public abstract class Växter{
     public double getHeightInMeters() {
         return heightInMeters;
     }
-
-    public abstract void printHowMuchWater();
-
-    public abstract String typeOfFlower();
 }

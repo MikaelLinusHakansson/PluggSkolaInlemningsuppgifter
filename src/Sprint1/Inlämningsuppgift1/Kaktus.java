@@ -1,8 +1,12 @@
 package Sprint1.Inlämningsuppgift1;
 
-public class Kaktus extends Växter{
-    public Kaktus(String name) {
-        super(name, -1);
+import java.util.ArrayList;
+import java.util.List;
+
+public class Kaktus extends Växter implements Iprint {
+
+    public Kaktus(String name, double heightInMeters) {
+        super(name, heightInMeters);
     }
 
     @Override
@@ -15,13 +19,8 @@ public class Kaktus extends Växter{
         return super.getHeightInMeters();
     }
 
-    public String typeOfFlower(){
-        String type = getClass().getSimpleName();
-        return type;
-    }
-
     @Override
-    public void printHowMuchWater() {
-        System.out.println(this.getName() + " ska ha 0.2l vatten per dag");
+    public void printHowMuchWater() {  // polymorfism ändrar utskriften från Iprint Interfacen
+        System.out.println("Kaktusen " + this.getName() + " ska ha 0.2l vatten per dag");
     }
 }

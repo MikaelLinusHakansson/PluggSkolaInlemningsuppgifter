@@ -1,33 +1,39 @@
 package Sprint1.Inlämningsuppgift1;
 
 
+import javax.swing.*;
+
 public class InlämingMain {
+
+
     public static void main(String[] args) {
+        String name = JOptionPane.showInputDialog("Namn på växt: ");
+        printing(name);
+    }
 
-        /*Tre subklasser: växter, Palm, köttätande växt, kaktus. De är alla växter så skapa en Superklass namn "Växter".
-         * Gemensamt:
-         * De ska alla vattnas, de har alla ett namn, de har alla en längd.
-         * Användning av JOptionPane.InputDialog fråga efter vilken växt som ska vattnas, fråga efter namn.
-         * Växterna som ska implementeras:
-         * Kaktusen Igge, 0.2m hög
-         * Palmen Laura, 5m hög
-         * Köttätande växten Meatloaf 0.7m hög
-         * Palmen putte 1 meter hög.
-         * Börja med att skapa en Superklass, sedan implementera subklasserna.*/
-        Kaktus nykaktus = new Kaktus("Igge");
-//        nykaktus.printHowMuchWater();
-
-        KöttätandeVäxt nyKöttis = new KöttätandeVäxt("Meatloaf", 0.7);
-//        nyKöttis.printHowMuchWater();
-
-        String namn = "Igge";
-
-        if(nyKöttis.getName().contains(namn)){
-            nyKöttis.printHowMuchWater();
+    /*
+    Skulle vilja ha detta i en egen klass gömt någonstans.
+    Frågan är, blir det godkänt?
+    */
+    public static void printing(String name) {
+        Kaktus Igge = new Kaktus("Igge", 0.20);
+        KöttätandeVäxt meatloaf = new KöttätandeVäxt("Meatloaf", 0.7);
+        Palm laura = new Palm("Laura", 5);
+        Palm putte = new Palm("Putte", 1);
+        if (name.equalsIgnoreCase(Igge.getName())) {
+            Igge.printHowMuchWater();
+        } else if (name.equalsIgnoreCase(laura.getName())) {
+            laura.printHowMuchWater();
+        } else if (name.equalsIgnoreCase(putte.getName())) {
+            putte.printHowMuchWater();
+        } else if (name.equalsIgnoreCase(meatloaf.getName())) {
+            meatloaf.printHowMuchWater();
         } else {
-            nykaktus.printHowMuchWater();
-        }  // something like this but in an object.
-         /*Fortsätt med palmer*/
+            System.out.println("Du har ingen blommad vid det namnet");
+        }
+
+        /* med tanke på att programmet är
+         så litet så går det att kontrollera datan på detta sättet*/
     }
 }
 

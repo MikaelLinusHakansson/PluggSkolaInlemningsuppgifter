@@ -1,6 +1,6 @@
 package Sprint1.Inlämningsuppgift1;
 
-public class KöttätandeVäxt extends Växter{
+public class KöttätandeVäxt extends Växter implements Iprint {
     public KöttätandeVäxt(String name, double heightInMeters) {
         super(name, heightInMeters);
     }
@@ -17,13 +17,7 @@ public class KöttätandeVäxt extends Växter{
 
     @Override
     public void printHowMuchWater() {
-        double proteinDrink = 0.1 + (getHeightInMeters() * 0.2);
-        System.out.println(this.getName() +" ska ha " + proteinDrink + " proteindrink per dag");
-    }
-
-    @Override
-    public String typeOfFlower() {
-        String type = getClass().getSimpleName();
-        return type;
+        double proteinDrink = 0.1 + (getHeightInMeters() * 0.2);  // polymorfism ändrar utskriften från Iprint Interfacen
+        System.out.println("Köttätande växten " + this.getName() + " ska ha " + proteinDrink + "l proteindrink per dag");
     }
 }
