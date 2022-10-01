@@ -15,10 +15,18 @@ public class InlämingMain {
          * Palmen putte 1 meter hög.
          * Börja med att skapa en Superklass, sedan implementera subklasserna.*/
         Kaktus nykaktus = new Kaktus("Igge");
-        nykaktus.printHowMuchWater();
+//        nykaktus.printHowMuchWater();
 
         KöttätandeVäxt nyKöttis = new KöttätandeVäxt("Meatloaf", 0.7);
-        nyKöttis.printHowMuchWater();
+//        nyKöttis.printHowMuchWater();
+
+        String namn = "Igge";
+
+        if(nyKöttis.getName().contains(namn)){
+            nyKöttis.printHowMuchWater();
+        } else {
+            nykaktus.printHowMuchWater();
+        }  // something like this but in an object.
          /*Fortsätt med palmer*/
     }
 }
