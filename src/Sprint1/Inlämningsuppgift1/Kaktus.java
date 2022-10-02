@@ -1,5 +1,6 @@
 package Sprint1.Inlämningsuppgift1;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class Kaktus extends Växter implements Iprint {
 
     @Override
     public void printHowMuchWater() {  // polymorfism ändrar utskriften från Iprint Interfacen
-        System.out.println("Kaktusen " + this.getName() + " ska ha 0.2l vatten per dag");
+        JOptionPane.showMessageDialog(null, "Kaktusen " + this.getName()
+                + " ska ha 0.2l mineralvatten");
     }
 }

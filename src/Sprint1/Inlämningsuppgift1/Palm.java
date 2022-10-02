@@ -1,5 +1,7 @@
 package Sprint1.Inlämningsuppgift1;
 
+import javax.swing.*;
+
 public class Palm extends Växter implements Iprint {
     public Palm(String name, double heightInMeters) {
         super(name, heightInMeters);
@@ -18,8 +20,7 @@ public class Palm extends Växter implements Iprint {
     @Override
     public void printHowMuchWater() {  // polymorfism ändrar utskriften från Iprint Interfacen
         double amountOfWater = 0.5 * getHeightInMeters();
-        System.out.println("Palmen " + this.getName() + " ska ha " + amountOfWater + "l vatten om dagen!");
+        JOptionPane.showMessageDialog(null, "Palmen " + this.getName() +
+                " ska ha " + amountOfWater + "l kranvatten");
     }
-
-
 }
