@@ -1,8 +1,6 @@
 package Sprint1.Inlämningsuppgift1;
 
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Kaktus extends Växter implements Iprint {
 
