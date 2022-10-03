@@ -2,7 +2,7 @@ package Sprint1.Inlämningsuppgift1;
 
 import javax.swing.*;
 
-public class Kaktus extends Växter implements Iprint {
+public class Kaktus extends Växter implements Iprint {  // polymorfism, Kaktus är en växt men även en kaktus.
 
     public Kaktus(String name, double heightInMeters) {
         super(name, heightInMeters);
@@ -24,3 +24,8 @@ public class Kaktus extends Växter implements Iprint {
                 + " ska ha 0.2l mineralvatten");
     }
 }
+
+/*
+Samma som föregående, arv från växter och implemnterat ett interface Iprint.
+Överskrivit några metoder som getName, getHeight och printHowMuchWater från interfacen.
+*/

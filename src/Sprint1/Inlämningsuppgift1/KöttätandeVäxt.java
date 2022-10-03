@@ -24,3 +24,7 @@ public class KöttätandeVäxt extends Växter implements Iprint {
                 + " ska ha " + proteinDrink + "l proteindryck");
     }
 }
+
+/*
+Nästan exakt samma som de tidigare klasserna fast såklart med en override för Iprint.
+* */

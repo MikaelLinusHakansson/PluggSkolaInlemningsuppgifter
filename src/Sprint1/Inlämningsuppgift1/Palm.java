@@ -24,3 +24,9 @@ public class Palm extends Växter implements Iprint {
                 " ska ha " + amountOfWater + "l kranvatten");
     }
 }
+
+/*
+Arv från klassen Växter och implementerat en interaface vid namn Iprint.
+Du har samma konstroktor från superklassen sedan överskriver getName,
+GetHeight samt polymorfism / överskrivit / override Interface funktionen.
+ */
