@@ -14,19 +14,20 @@ public class StartaProgram {
     }
 
     private static void printOutAmountOfWaterFrom(String name) {
-        // ingen kontroll hur vidare namnet är tomt, det görs tidigare.
-        Kaktus Igge = new Kaktus("Igge", 0.20);
-        KöttätandeVäxt meatloaf = new KöttätandeVäxt("Meatloaf", 0.7);
-        Palm laura = new Palm("Laura", 5);
-        Palm putte = new Palm("Putte", 1);
+        // Ingen kontroll hur vidare namnet är tomt, det görs tidigare.
+        // Polymorfism
+        Växter Igge = new Kaktus("Igge", 0.20);
+        Växter köttätandeVäst = new KöttätandeVäxt("Meatloaf", 0.7);
+        Växter laura = new Palm("Laura", 5);
+        Växter putte = new Palm("Putte", 1);
         if (name.equalsIgnoreCase(Igge.getName())) {
             Igge.printHowMuchWater();
         } else if (name.equalsIgnoreCase(laura.getName())) {
             laura.printHowMuchWater();
         } else if (name.equalsIgnoreCase(putte.getName())) {
             putte.printHowMuchWater();
-        } else if (name.equalsIgnoreCase(meatloaf.getName())) {
-            meatloaf.printHowMuchWater();
+        } else if (name.equalsIgnoreCase(köttätandeVäst.getName())) {
+            köttätandeVäst.printHowMuchWater();
         } else {
             JOptionPane.showMessageDialog(null, "Du har ingen blommad vid det namnet");
             /* om blomman inte finns skriv

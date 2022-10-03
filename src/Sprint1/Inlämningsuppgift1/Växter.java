@@ -1,12 +1,12 @@
 package Sprint1.Inlämningsuppgift1;
 
-public class Växter {
+public class Växter implements Iprint{
     private String name;
     private double heightInMeters;
 
     public Växter(String name, double heightInMeters) {
         if (!name.isEmpty() && heightInMeters > 0) {
-            this.name = name;  // inkapsulation kontrollerar så ingen ogiltiga värden kan passera.
+            this.name = name;  // Encapsulation kontrollerar så ingen ogiltiga värden kan passera.
             this.heightInMeters = heightInMeters;
         } else {
             System.out.println("Invalid values");
@@ -21,7 +21,13 @@ public class Växter {
     public double getHeightInMeters() {
         return heightInMeters;
     }  // encapsulation
+
+    @Override
+    public void printHowMuchWater() {
+    }
 }
+
+
 
 
 
