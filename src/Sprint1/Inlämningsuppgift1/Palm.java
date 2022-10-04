@@ -3,6 +3,8 @@ package Sprint1.Inlämningsuppgift1;
 import javax.swing.*;
 
 public class Palm extends Växter implements Iprint {
+    public enum Växt{KAKTUS, KÖTTÄTANDE, PALM}
+    private Växt växt = Växt.PALM;
     public Palm(String name, double heightInMeters) {
         super(name, heightInMeters);
     }
@@ -20,8 +22,16 @@ public class Palm extends Växter implements Iprint {
     @Override
     public void printHowMuchWater() {  // polymorfism ändrar utskriften från Iprint Interfacen
         double amountOfWater = 0.5 * getHeightInMeters();
-        JOptionPane.showMessageDialog(null, "Palmen " + this.getName() +
+        JOptionPane.showMessageDialog(null, getVäxt() + " " + this.getName() +
                 " ska ha " + amountOfWater + "l kranvatten");
+    }
+
+    public Växt getVäxt() {
+        return växt;
+    }
+
+    public void setVäxt(Växt växt) {
+        this.växt = växt;
     }
 }
 
