@@ -2,6 +2,8 @@ package Sprint1.Inlämningsuppgift1;
 
 import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class KaktusTest{
@@ -30,5 +32,13 @@ class KaktusTest{
         assert (p.getVäxt().equals(Kaktus.Växt.KAKTUS));  // testar om setters funkar.
         p.setVäxt(Kaktus.Växt.PALM);
         assert(!p.getVäxt().equals(Kaktus.Växt.KAKTUS));
+    }
+
+    @Test
+    void printHowMuchWater() {
+        assert (p.getVäxt().equals(Kaktus.Växt.KAKTUS));
+        assert (!p.getVäxt().equals(Kaktus.Växt.PALM));
+        assert (p.getName().equalsIgnoreCase("asd"));
+        assert (!p.getName().equalsIgnoreCase("laura"));
     }
 }
